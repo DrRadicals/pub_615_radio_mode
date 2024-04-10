@@ -75,6 +75,7 @@ def main():
         for index, content in enumerate(ap_cli[ap]):
             if "flex-dual-band" in content:
                 ap_cli[ap][index] = "  flex-dual-band 5GHz-and-2.4GHz"
+            ap_cli[ap].append("  flex-dual-band 5GHz-and-2.4GHz")
     #push to aps in list by AP      
     for ap in ap_cli.keys():
         post_per_ap_parameters = {"clis" : ap_cli[ap]}
